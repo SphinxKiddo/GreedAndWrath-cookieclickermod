@@ -1,0 +1,1 @@
+# greed_and_wrath_cookieclicker
