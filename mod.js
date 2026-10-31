@@ -7,3 +7,5 @@ Game.registerMod("greed_and_wrath", {
         );
     }
 });
+
+Game.Earn(10000000000)
