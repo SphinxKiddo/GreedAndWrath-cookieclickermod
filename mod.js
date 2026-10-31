@@ -1,4 +1,4 @@
-Game.registerMod("greed_and_wrath, {
+Game.registerMod("greed_and_wrath", {
     init: function() {
         Game.Notify(
             "Connection Success!", 
