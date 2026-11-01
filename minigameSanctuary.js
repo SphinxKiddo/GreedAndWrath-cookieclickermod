@@ -1,11 +1,9 @@
-var San = Game.Objects['Portal'].minigame
+var San = {};
+San.parent = Game.Objects['Portal'];
+San.parent.minigame = San;
 
-San.launch = function(){
-	var San = this;
+Game.Notify("Sanctuary launched", "Hip hip hooray");
 
-	Game.Notify("Sanctuary launched", "Hip hip hooray");
-
-	San.save = function(){
-		return ""
-	}
+San.save = function(){
+	return ""
 }

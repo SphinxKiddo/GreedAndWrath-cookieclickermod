@@ -1,11 +1,9 @@
-var Lab = Game.Objects['Alchemy lab'].minigame
+var Lab = {};
+Lab.parent= Game.Objects['Alchemy lab'];
+Lab.parent.minigame = Lab;
 
-Lab.launch = function(){
-	var Lab = this;
+Game.Notify("Laboratory launched", "Hip hip hooray");
 
-	Game.Notify("Laboratory launched", "Hip hip hooray");
-
-	Lab.save = function(){
-		return ""
-	}
+Lab.save = function(){
+	return ""
 }
