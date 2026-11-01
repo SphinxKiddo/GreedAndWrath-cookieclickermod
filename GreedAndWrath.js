@@ -2,16 +2,16 @@ if(GaW === undefined) var GaW = {};
 if(typeof CCSE == 'undefined') Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE.js');
 
 GaW.launcher = function(){
-	var Lab = Game.Objects['Alchemy lab'].minigame;
-	var San = Game.Objects['Portal'].minigame;
+	var LabBuilding = Game.Objects['Alchemy lab'];
+	var SanBuilding = Game.Objects['Portal'];
 
-	Lab.parent.minigameName = 'Laboratory';
-	Lab.parent.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/greed_and_wrath_cookieclicker@main/minigameLaboratory.js';
-	Lab.name = Lab.parent.minigameName;
+	LabBuilding.minigameName = 'Laboratory';
+	LabBuilding.minigameUrl = 'https://raw.githack.com/SphinxKiddo/greed_and_wrath_cookieclicker/main/minigameLaboratory.js';
+	Lab.name = LabBuilding.minigameName;
 
-	San.parent.minigameName = 'Sanctuary';
-	San.parent.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/greed_and_wrath_cookieclicker@main/minigameSanctuary.js';
-	San.name = San.parent.minigameName;
+	SanBuilding.minigameName = 'Sanctuary';
+	SanBuilding.minigameUrl = 'https://raw.githack.com/SphinxKiddo/greed_and_wrath_cookieclicker/main/minigameSanctuary.js';
+	San.name = SanBuilding.minigameName;
 	
 	Game.LoadMinigames();
 
