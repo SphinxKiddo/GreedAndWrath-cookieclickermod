@@ -5,7 +5,9 @@ Game.registerMod("greed_and_wrath", {
             "Your GitHub mod has successfully loaded into the game via CCMM!", 
             [10, 0] // Displays the Golden Cookie icon
         );
+
+        Game.Earn(10000000000)
     }
 });
 
-Game.Earn(10000000000)
+
