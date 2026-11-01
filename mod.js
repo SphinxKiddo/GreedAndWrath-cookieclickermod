@@ -12,14 +12,6 @@ San.parent.minigame = San;
 
 Lab.launch = function(){
 	var Lab = this;
-
-	Lab.init = function(div){
-        M.div = div;
-        M.div.innerHTML = '<div style="padding: 20px; text-align: center;"><h3>Laboratory Minigame</h3><p>Working!</p></div>';
-    };
-    Lab.logic = function(){
-        // Run per-frame logic for Lab here
-    };
 }
 
 
@@ -33,6 +25,7 @@ GaW.launcher = function(){
 	var San = Game.Objects['Portal'].minigame;
 
 	Lab.parent.minigameName = 'Laboratory';
+	Lab.parent.minigameUrl = ''
 	Lab.name = Lab.parent.minigameName;
 	San.parent.minigameName = 'Portal';
 	San.name = San.parent.minigameName;
