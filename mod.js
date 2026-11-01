@@ -46,6 +46,6 @@ if(!GaW.isLoaded){
 	else{
 		if(!CCSE) var CCSE = {};
 		if(!CCSE.postLoadHooks) CCSE.postLoadHooks = [];
-		CCSE.postLoadHooks.push(GaW.launch);
+		CCSE.postLoadHooks.push(GaW.launcher);
 	}
 }
