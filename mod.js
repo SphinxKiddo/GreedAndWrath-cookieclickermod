@@ -1,3 +1,5 @@
+
+
 Game.registerMod("greed_and_wrath", {
     init: function() {
         Game.Notify(
@@ -9,6 +11,5 @@ Game.registerMod("greed_and_wrath", {
         
     }
 });
-
 
 
