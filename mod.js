@@ -1104,13 +1104,87 @@ San.launch = function(){
 GaW.launcher = function(){
 	var Lab = Game.Objects['Alchemy lab'].minigame;
 	var San = Game.Objects['Portal'].minigame;
+	var M = Game.Objects['Alchemy lab'].minigame;
 
 	Lab.parent.minigameName = 'Laboratory';
 	Lab.name = Lab.parent.minigameName;
 	San.parent.minigameName = 'Portal';
 	San.name = San.parent.minigameName;
 
-
+	Game.customOptionsMenu.push(function(){
+		CCSE.MenuHelper;
+		var str = '<div class="listing">'
+		+ CCSE.MenuHelper.ToggleButton(M, 'bankPercentage', 'Casino_bankPercentageButton', 'Bank Percentage ON', 'Bank Percentage OFF', "Game.Objects['Chancemaker'].minigame.Toggle")
+		+ '<label>Calculate all bets as a percentage of the current bank.</label></div>';
+		var callback = "Game.Objects['Chancemaker'].minigame.beatLength = Math.round(l('beatLengthSlider').value); l('beatLengthSliderRightText').innerHTML = Game.Objects['Chancemaker'].minigame.beatLength;";
+		str += '<div class="listing">' +
+			CCSE.MenuHelper.Slider('beatLengthSlider', 'Beat Length', '[$]', () => M.beatLength, callback, 0, 1000, 10) + 
+			'This is the time in milliseconds between each card deal.</div>';
+		
+		CCSE.AppendCollapsibleOptionsMenu(M.name, str);
+	});
+	
+	Game.customStatsMenu.push(function(){
+		CCSE.AppendStatsVersionNumber(M.name, M.version);
+		if(M.loadedCount){
+			if(M.games.Blackjack.netTotal) CCSE.AppendStatsGeneral('<div class="listing"><b>Blackjack has earned you :</b> <div class="price plain">' + Game.tinyCookie() + Beautify(M.games.Blackjack.netTotal) + '</div></div>');
+			if(M.games.Blackjack.ownLuckWins) CCSE.AppendStatsSpecial('<div class="listing"><b>Made your own luck :</b> ' + M.games.Blackjack.ownLuckWins + ' times</div>');
+		}
+	});
+	
+	M.Toggle = function(prefName, button, on, off, invert){
+		if(M[prefName]){
+			l(button).innerHTML = off;
+			M.bankPercentage = false;
+		}
+		else{
+			l(button).innerHTML = on;
+			M.bankPercentage = true;
+		}
+		l(button).className = 'smallFancyButton prefButton option' + ((M[prefName] ^ invert) ? '' : ' off');
+		M.save();
+		//M.init(M.div);
+		M.buildSidebar();
+	}
+	
+	CCSE.customLoad.push(function(ret){
+		if(M.load){
+			if(localStorage.getItem(M.savePrefix) != null && !CCSE.config.OtherMods[M.name]) CCSE.config.OtherMods[M.name] = localStorage.getItem(M.savePrefix);
+			if(CCSE.config.OtherMods[M.name]) M.parent.minigameSave = CCSE.config.OtherMods[M.name];
+			M.saveString = M.parent.minigameSave;
+			
+			M.load(M.saveString);
+		}
+		return ret;
+	});
+	
+	Game.registerHook('check', function(){
+		if(M.loadedCount){
+			if(M.games.Blackjack.winsT >= 7) Game.Unlock('Raise the stakes');
+			if(Game.Has('Raise the stakes') && M.games.Blackjack.winsT >= 49) Game.Unlock('High roller!');
+			if(Game.Has('High roller!') && Game.cookies >= (4 * Game.cookiesPs * 60 * 60)) Game.Unlock('Double or nothing');
+			if(Game.Has('Double or nothing') && Game.cookies >= (10 * Game.cookiesPs * 60 * 60)) Game.Unlock('Stoned cows');
+			if(Game.Has('Stoned cows') && Game.cookies >= (30 * Game.cookiesPs * 60 * 60)) Game.Unlock('Game for Pros');
+			
+			if(Game.Has('I make my own luck') && M.games.Blackjack.ownLuckWins >= 52) Game.Unlock('Infinite Improbability Drive');
+			if(M.games.Blackjack.tiesLost >= 3) Game.Unlock('Standard push');
+			if(M.games.Blackjack.tiesLost >= 7) Game.Unlock('Tiebreaker');
+			if(M.games.Blackjack.doubleDown >= 7) Game.Unlock('Double down');
+			
+			if(M.games.Blackjack.winsT >= 21) Game.Win('Card minnow');
+			if(M.games.Blackjack.winsT >= 210) Game.Win('Card trout');
+			if(M.games.Blackjack.winsT >= 2100) Game.Win('Card shark');
+			if(M.games.Blackjack.ownLuckWins >= 13) Game.Win('Ace up your sleeve');
+			if(M.games.Blackjack.ownLuckWins >= (13 * 13)) Game.Win('Paid off the dealer');
+			if(M.games.Blackjack.ownLuckWins >= 666) Game.Win('Deal with the Devil');
+			
+			if(M.games.choice == 0) M.games.Blackjack.buildSidebar();
+		}
+	});
+	
+	
+	if(typeof CM != 'undefined') CM.Sim.InitData(); // Cookie Monster compatibility
+	
 	Game.LoadMinigames();
 
     Game.Notify(
@@ -1130,3 +1204,5 @@ if(!GaW.isLoaded){
 		CCSE.postLoadHooks.push(GaW.launcher);
 	}
 }
+
+GaW = 0;
