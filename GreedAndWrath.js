@@ -20,7 +20,7 @@ GaW.launcher = function(){
 	Lab.name = Lab.parent.minigameName;
 
 	San.parent.minigameName = 'Sanctuary';
-	San.parent.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/greed_and_wrath_cookieclicker@refs/heads/main/dummy.js'
+	San.parent.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/greed_and_wrath_cookieclicker@refs/heads/main/minigameSanctuary.js'
 	San.name = San.parent.minigameName;
 	
 	Game.LoadMinigames();
