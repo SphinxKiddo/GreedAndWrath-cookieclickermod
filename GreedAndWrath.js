@@ -11,6 +11,8 @@ San.parent = Game.Objects['Portal'];
 San.parent.minigame = San;
 
 Lab.launch = {
+	var Lab = this
+
 	Game.Notify("Laboratory launched", "Hip hip hooray")
 
     save: function() {
@@ -25,6 +27,8 @@ Lab.launch = {
 }
 
 San.launch = {
+	var San = this
+
 	Game.Notify("Sanctuary launched", "Hip hip hooray")
 
     save: function() {
