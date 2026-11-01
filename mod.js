@@ -1,10 +1,11 @@
 if(GaW === undefined) var GaW = {};
+if(typeof CCSE == 'undefined') Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE.js');
 
-Lab = {};
+var Lab = {};
 Lab.parent= Game.Objects['Alchemy lab'];
 Lab.parent.minigame = Lab;
 
-San = {};
+var San = {};
 San.parent = Game.Objects['Portal'];
 San.parent.minigame = San;
 
@@ -19,27 +20,24 @@ San.launch = function(){
 
 
 GaW.launcher = function(){
-	var Lab = Game.Objects['Alchemy lab'].minigame;
-	var San = Game.Objects['Portal'].minigame;
+	init: function{
+		var Lab = Game.Objects['Alchemy lab'].minigame;
+		var San = Game.Objects['Portal'].minigame;
 
-	Lab.parent.minigameName = 'Laboratory';
-	Lab.parent.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/greed_and_wrath_cookieclicker@refs/heads/main/dummy.js'
-	Lab.name = Lab.parent.minigameName;
+		Lab.parent.minigameName = 'Laboratory';
+		Lab.parent.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/greed_and_wrath_cookieclicker@refs/heads/main/dummy.js'
+		Lab.name = Lab.parent.minigameName;
 
-	San.parent.minigameName = 'Sanctuary';
-	San.parent.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/greed_and_wrath_cookieclicker@refs/heads/main/dummy.js'
-	San.name = San.parent.minigameName;
-	
-	Game.LoadMinigames();
+		San.parent.minigameName = 'Sanctuary';
+		San.parent.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/greed_and_wrath_cookieclicker@refs/heads/main/dummy.js'
+		San.name = San.parent.minigameName;
+		
+		Game.LoadMinigames();
 
-    Game.Notify("Hello", "Things are working :)");
-	GaW.isLoaded = 1;
+		Game.Notify("Hello", "Things are working :)");
+		GaW.isLoaded = 1;
+	}
 }
 
-Game.registerMod('Greed and Wrath',
-	init: function() {
-		GaW.launcher
-	},
-)
-
+Game.registerMod('Greed and Wrath', GaW.launcher)
 GaW = 0;
