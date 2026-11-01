@@ -1,5 +1,4 @@
 if(GaW === undefined) var GaW = {};
-if(typeof CCSE == 'undefined') Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE.js');
 
 Lab = {};
 Lab.parent= Game.Objects['Alchemy lab'];
@@ -37,15 +36,10 @@ GaW.launcher = function(){
 	GaW.isLoaded = 1;
 }
 
-if(!GaW.isLoaded){
-	if(CCSE && CCSE.isLoaded){
-		GaW.launcher();
-	}
-	else{
-		if(!CCSE) var CCSE = {};
-		if(!CCSE.postLoadHooks) CCSE.postLoadHooks = [];
-		CCSE.postLoadHooks.push(GaW.launcher);
-	}
-}
+Game.registerMod('Greed and Wrath',
+	init: function() {
+		GaW.launcher
+	},
+)
 
 GaW = 0;
