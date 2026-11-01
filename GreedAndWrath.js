@@ -14,12 +14,20 @@ Lab.launch = function(){
 	var Lab = this;
 
 	Game.Notify("Laboratory launched", "Hip hip hooray");
+
+	Lab.save = function(){
+		return ""
+	}
 }
 
 San.launch = function(){
 	var San = this;
 
 	Game.Notify("Sanctuary launched", "Hip hip hooray");
+
+	San.save = function(){
+		return ""
+	}
 }
 
 
