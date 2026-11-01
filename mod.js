@@ -9,7 +9,6 @@ San = {};
 San.parent = Game.Objects['Portal'];
 San.parent.minigame = San;
 
-
 Lab.launch = function(){
 	var Lab = this;
 }
@@ -25,9 +24,11 @@ GaW.launcher = function(){
 	var San = Game.Objects['Portal'].minigame;
 
 	Lab.parent.minigameName = 'Laboratory';
-	Lab.parent.minigameUrl = ''
+	Lab.parent.minigameUrl = 'https://raw.githubusercontent.com/SphinxKiddo/greed_and_wrath_cookieclicker/refs/heads/main/dummy.js'
 	Lab.name = Lab.parent.minigameName;
-	San.parent.minigameName = 'Portal';
+
+	San.parent.minigameName = 'Sanctuary';
+	San.parent.minigameUrl = 'https://raw.githubusercontent.com/SphinxKiddo/greed_and_wrath_cookieclicker/refs/heads/main/dummy.js'
 	San.name = San.parent.minigameName;
 	
 	Game.LoadMinigames();
