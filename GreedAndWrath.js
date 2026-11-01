@@ -10,26 +10,6 @@ var San = {};
 San.parent = Game.Objects['Portal'];
 San.parent.minigame = San;
 
-Lab.launch = function(){
-	var Lab = this;
-
-	Game.Notify("Laboratory launched", "Hip hip hooray");
-
-	Lab.save = function(){
-		return ""
-	}
-}
-
-San.launch = function(){
-	var San = this;
-
-	Game.Notify("Sanctuary launched", "Hip hip hooray");
-
-	San.save = function(){
-		return ""
-	}
-}
-
 
 GaW.launcher = function(){
 	var Lab = Game.Objects['Alchemy lab'].minigame;
