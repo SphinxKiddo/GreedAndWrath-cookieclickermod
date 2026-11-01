@@ -39,7 +39,7 @@ GreedAndWrath.launch = function() {
             );
 
             if (Lab.parent.level > 0 && Lab.parent.amount > 0) {
-                Lab.parent.initMinigame();
+                Lab.parent.initMinigame;
             }
             
             Game.BuildStore();
