@@ -10,12 +10,12 @@ San.parent = Game.Objects['Portal'];
 San.parent.minigame = San;
 
 
-Lab.launch() = function(){
+Lab.launch = function(){
 	var Lab = this;
 }
 
 
-San.launch() = function(){
+San.launch = function(){
 	var San = this;
 }
 
