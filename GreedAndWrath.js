@@ -10,17 +10,45 @@ var San = {};
 San.parent = Game.Objects['Portal'];
 San.parent.minigame = San;
 
+Lab.launch = {
+	Game.Notify("Laboratory launched", "Hip hip hooray")
+
+    save: function() {
+        return ""; // Return empty string or default save state
+    },
+    load: function(str) {
+        // Empty skeleton
+    },
+    reset: function() {
+        // Empty skeleton
+    }
+}
+
+San.launch = {
+	Game.Notify("Sanctuary launched", "Hip hip hooray")
+
+    save: function() {
+        return ""; // Return empty string or default save state
+    },
+    load: function(str) {
+        // Empty skeleton
+    },
+    reset: function() {
+        // Empty skeleton
+    }
+}
+
 
 GaW.launcher = function(){
 	var Lab = Game.Objects['Alchemy lab'].minigame;
 	var San = Game.Objects['Portal'].minigame;
 
 	Lab.parent.minigameName = 'Laboratory';
-	Lab.parent.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/greed_and_wrath_cookieclicker@main/minigameLaboratory.js'
+	Lab.parent.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/greed_and_wrath_cookieclicker@main/dummy.js'
 	Lab.name = Lab.parent.minigameName;
 
 	San.parent.minigameName = 'Sanctuary';
-	San.parent.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/greed_and_wrath_cookieclicker@main/minigameSanctuary.js'
+	San.parent.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/greed_and_wrath_cookieclicker@main/dummy.js'
 	San.name = San.parent.minigameName;
 	
 	Game.LoadMinigames();
