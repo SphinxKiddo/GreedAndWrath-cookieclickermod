@@ -14,32 +14,12 @@ Lab.launch = function(){
 	var Lab = this;
 
 	Game.Notify("Laboratory launched", "Hip hip hooray");
-
-    save: function() {
-        return ""; // Return empty string or default save state
-    },
-    load: function(str) {
-        // Empty skeleton
-    },
-    reset: function() {
-        // Empty skeleton
-    }
 }
 
 San.launch = function(){
 	var San = this;
 
 	Game.Notify("Sanctuary launched", "Hip hip hooray");
-
-    save: function() {
-        return ""; // Return empty string or default save state
-    },
-    load: function(str) {
-        // Empty skeleton
-    },
-    reset: function() {
-        // Empty skeleton
-    }
 }
 
 
