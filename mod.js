@@ -12,11 +12,23 @@ San.parent.minigame = San;
 
 Lab.launch = function(){
 	var Lab = this;
+
+	Lab.div = div;
+	div.innerHTML = '<div style="padding: 12px; text-align: center;">' +
+                    '<h3>Laboratory Minigame</h3>' +
+                    '<button class="btn" style="padding: 4px 8px; cursor: pointer;">Open Lab</button>' +
+                    '</div>';
 }
 
 
 San.launch = function(){
 	var San = this;
+	
+	San.div = div;
+	div.innerHTML = '<div style="padding: 12px; text-align: center;">' +
+                    '<h3>Portal Minigame</h3>' +
+                    '<button class="btn" style="padding: 4px 8px; cursor: pointer;">Open Portal</button>' +
+                    '</div>';
 }
 
 
