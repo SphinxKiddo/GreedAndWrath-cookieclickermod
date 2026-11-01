@@ -6,7 +6,7 @@ Game.registerMod("greed_and_wrath", {
             [10, 0] // Displays the Golden Cookie icon
         );
 
-        Game.Earn(10000000000)
+        
     }
 });
 
