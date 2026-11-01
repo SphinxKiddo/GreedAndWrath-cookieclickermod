@@ -16,11 +16,11 @@ GaW.launcher = function(){
 	var San = Game.Objects['Portal'].minigame;
 
 	Lab.parent.minigameName = 'Laboratory';
-	Lab.parent.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/greed_and_wrath_cookieclicker@main/dummy.js';
+	Lab.parent.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/greed_and_wrath_cookieclicker@main/minigameLaboratory.js';
 	Lab.name = Lab.parent.minigameName;
 
 	San.parent.minigameName = 'Sanctuary';
-	San.parent.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/greed_and_wrath_cookieclicker@main/dummy.js';
+	San.parent.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/greed_and_wrath_cookieclicker@main/minigameSanctuary.js';
 	San.name = San.parent.minigameName;
 	
 	Game.LoadMinigames();
