@@ -7,11 +7,11 @@ GaW.launcher = function(){
 
 	LabBuilding.minigameName = 'Laboratory';
 	LabBuilding.minigameUrl = 'https://raw.githack.com/SphinxKiddo/greed_and_wrath_cookieclicker/main/minigameLaboratory.js';
-	Lab.name = LabBuilding.minigameName;
+	LabBuilding.minigame.name = LabBuilding.minigameName;
 
 	SanBuilding.minigameName = 'Sanctuary';
 	SanBuilding.minigameUrl = 'https://raw.githack.com/SphinxKiddo/greed_and_wrath_cookieclicker/main/minigameSanctuary.js';
-	San.name = SanBuilding.minigameName;
+	SanBuilding.minigame.name = SanBuilding.minigameName;
 	
 	Game.LoadMinigames();
 
