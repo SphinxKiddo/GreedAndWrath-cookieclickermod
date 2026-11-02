@@ -2,6 +2,10 @@ if(GaW === undefined) var GaW = {};
 if(typeof CCSE == 'undefined') Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE.js');
 
 GaW.launcher = function(){
+	
+
+
+	//====MINIGAME SETUP====//
 	var LabBuilding = Game.Objects['Alchemy lab'];
 	var SanBuilding = Game.Objects['Portal'];
 
