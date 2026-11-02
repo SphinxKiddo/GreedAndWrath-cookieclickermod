@@ -25,9 +25,8 @@ M.launch = function()
 	{
 		return ""
 	}
-	
+
 	M.init(l('rowSpecial'+M.parent.id));
 }
-
 
 var M = 0;
