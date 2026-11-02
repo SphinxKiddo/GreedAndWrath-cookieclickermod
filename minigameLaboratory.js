@@ -8,7 +8,7 @@ Lab.launch = function(){
 	Game.Notify("Laboratory launched", "Hip hip hooray");
 }
 
-Lab.init = function(){
+Lab.init = function(div){
 	var div_str = '';
 		
 		// Added test CSS code to visually verify the minigame is loading
@@ -38,7 +38,7 @@ Lab.init = function(){
 			'<div class="lab-test-banner"> Lab Minigame CSS Test Successful! </div>' +
 		'</div>';
 
-		div.innerHTML = div_str;
+		Lab.div.innerHTML = div_str;
 
 }
 
