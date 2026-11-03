@@ -2,7 +2,7 @@ if(GaW === undefined) var GaW = {};
 if(typeof CCSE == 'undefined') Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE.js');
 
 GaW.launcher = function(){
-	GaW.sourceFolder = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/GreedAndWrath-cookieclickermod@main/assets/'
+	GaW.sourceFolder = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/GreedAndWrath-cookieclickermod/assets'
 
 	//====MINIGAME SETUP====//
 	var LabBuilding = Game.Objects['Alchemy lab'];
