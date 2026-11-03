@@ -9,7 +9,7 @@ GaW.launcher = function(){
 	var SanBuilding = Game.Objects['Portal'];
 
 	LabBuilding.minigameName = 'Laboratory';
-	LabBuilding.minigameUrl = 'https://raw.githack.com/SphinxKiddo/GreedAndWrath-cookieclickermod/main/minigameLaboratory.js';
+	LabBuilding.minigameUrl = 'https://raw.githack.com/SphinxKiddo/GreedAndWrath-cookieclickermod/main/minigamePantheon_REFERENCE.js';
 
 	SanBuilding.minigameName = 'Sanctuary';
 	SanBuilding.minigameUrl = 'https://raw.githack.com/SphinxKiddo/greed_and_wrath_cookieclicker/main/minigameSanctuary.js';
