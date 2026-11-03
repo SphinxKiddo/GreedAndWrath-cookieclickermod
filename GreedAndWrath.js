@@ -2,14 +2,14 @@ if(GaW === undefined) var GaW = {};
 if(typeof CCSE == 'undefined') Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE.js');
 
 GaW.launcher = function(){
-	GaW.sourceFolder = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/GreedAndWrath-cookieclickermod/assets'
+	GaW.sourceFolder = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/GreedAndWrath-cookieclickermod@tree/main/assets/'
 
 	//====MINIGAME SETUP====//
 	var LabBuilding = Game.Objects['Alchemy lab'];
 	var SanBuilding = Game.Objects['Portal'];
 
 	LabBuilding.minigameName = 'Laboratory';
-	LabBuilding.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/GreedAndWrath-cookieclickermod@refs/heads/main/minigamePantheon_REFERENCE.js';
+	LabBuilding.minigameUrl = 'https://raw.githack.com/SphinxKiddo/GreedAndWrath-cookieclickermod/main/minigamePantheon_REFERENCE.js';
 
 	SanBuilding.minigameName = 'Sanctuary';
 	SanBuilding.minigameUrl = 'https://raw.githack.com/SphinxKiddo/greed_and_wrath_cookieclicker/main/minigameSanctuary.js';
