@@ -336,7 +336,7 @@ M.launch=function()
 		
 		var str='';
 		str+='<style>'+
-		'#templeBG{background:url('+Game.resPath+'img/shadedBorders.png),url('+GaW.sourceFolder+'img/BGlaboratory.jpg);background-size:100% 100%,auto;position:absolute;left:0px;right:0px;top:0px;bottom:16px;}'+
+		'#templeBG{background:url('+Game.resPath+'img/shadedBorders.png),url('+GaW.sourceFolder+'BGlaboratory.jpg);background-size:100% 100%,auto;position:absolute;left:0px;right:0px;top:0px;bottom:16px;}'+
 		'#templeContent{position:relative;box-sizing:border-box;padding:4px 24px;text-align:center;}'+
 		'#templeGods{text-align:center;width:100%;padding:8px;box-sizing:border-box;}'+
 		'.templeIcon{pointer-events:none;margin:12px 6px 0px 6px;width:48px;height:48px;opacity:0.8;position:relative;}'+
