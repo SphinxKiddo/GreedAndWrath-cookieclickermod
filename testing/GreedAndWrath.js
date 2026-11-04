@@ -533,13 +533,13 @@ GaW.launcher = function(){
 
 	//====MINIGAME SETUP====//
 	var LabBuilding = Game.Objects['Alchemy lab'];
-	var SanBuilding = Game.Objects['Portal'];
+	//var SanBuilding = Game.Objects['Portal'];
 
 	LabBuilding.minigameName = 'Laboratory';
 	LabBuilding.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/GreedAndWrath-cookieclickermod@main/dummy.js';
 
-	SanBuilding.minigameName = 'Sanctuary';
-	SanBuilding.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/GreedAndWrath-cookieclickermod@main/dummy.js';
+	//SanBuilding.minigameName = 'Sanctuary';
+	//SanBuilding.minigameUrl = 'https://cdn.jsdelivr.net/gh/SphinxKiddo/GreedAndWrath-cookieclickermod@main/dummy.js';
 	
 	Game.LoadMinigames();
 
