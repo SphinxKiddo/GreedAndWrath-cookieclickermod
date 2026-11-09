@@ -339,7 +339,7 @@ M.launch=function()
 		
 		var str='';
 		str+='<style>'+
-		'#templeBG{background:url('+Game.resPath+'img/shadedBorders.png),url('+GaW.sourceFolder+'BGlaboratory.jpg);background-size:100% 100%,auto;position:absolute;left:0px;right:0px;top:0px;bottom:16px;}'+
+		'#labBG{background:url('+Game.resPath+'img/shadedBorders.png),url('+GaW.sourceFolder+'BGlaboratory.jpg);background-size:100% 100%,auto;position:absolute;left:0px;right:0px;top:0px;bottom:16px;}'+
 		'#templeContent{position:relative;box-sizing:border-box;padding:4px 24px;text-align:center;}'+
 		'#templeGods{text-align:center;width:100%;padding:8px;box-sizing:border-box;}'+
 		'.templeIcon{pointer-events:none;margin:12px 6px 0px 6px;width:48px;height:48px;opacity:0.8;position:relative;}'+
@@ -390,7 +390,7 @@ M.launch=function()
 		
 		'#templeInfo{position:relative;display:inline-block;margin:8px auto 0px auto;padding:8px 16px;padding-left:32px;text-align:center;font-size:11px;color:rgba(255,255,255,0.75);text-shadow:-1px 1px 0px #000;background:rgba(0,0,0,0.75);border-radius:16px;}'+
 		'</style>';
-		str+='<div id="templeBG"></div>';
+		str+='<div id="labBG"></div>';
 		str+='<div id="templeContent">';
 			str+='<div id="templeDrag"></div>';
 			str+='<div id="templeSlots">';
